@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografía y Contacto - Olivia Rodrigo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header id="principal-header" class="menu-flex">
+    <h1>Discografía y Contacto</h1>
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo Musical</a>
+        <a href="discografia.html">Discografía & Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Hoja de estilo en linea -->
+    <section class="tarjeta-item" style="border: 1px solid #d8b4fe; background-color: #faf5ff;">
+        <h2 style="color: #2b0d42;">Lanzamientos Principales</h2>
+        <p>
+            Cada álbum de Olivia representa una etapa de madurez artística, abarcando desde sus inicios con <em>SOUR</em>, pasando por la energía de <em>GUTS</em>, hasta su más reciente producción discográfica lanzada este año.
+        </p>
+
+        <table>
+            <caption>Álbumes de Estudio</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Álbum</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Discográfica</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SOUR</td>
+                    <td>2021</td>
+                    <td>Geffen Records</td>
+                    <td>Publicado</td>
+                </tr>
+                <tr>
+                    <td>GUTS</td>
+                    <td>2023</td>
+                    <td>Geffen Records</td>
+                    <td>Publicado</td>
+                </tr>
+                <tr>
+                    <td>You seem pretty sad for a girl so in love</td>
+                    <td>2026</td>
+                    <td>Geffen Records</td>
+                    <td>Nuevo Lanzamiento</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="tarjeta-item" style="margin-top: 1.5rem;">
+        <h2>Formulario de Club de Fans</h2>
+        <form action="#" method="get">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input id="correo" name="correo" type="email" required>
+
+            <label for="fecha">Fecha de registro:</label>
+            <input id="fecha" name="fecha" type="date" required>
+
+            <label for="mensaje">Canción favorita y comentarios:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Unirse al Club</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Autoría: Nathaly Reyes Orellana — Año: 2026</p>
+</footer>
+
+</body>
+</html>
