@@ -1,0 +1,190 @@
+/*VARIABLES CSS */
+:root {
+    --color-primario: #2b0d42;     
+    --color-secundario: #db2777;  
+    --color-fondo: #fcfbfd;        
+    --color-texto: #2d3748;       
+    --color-blanco: #ffffff;
+}
+
+/* 1. Selector Universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Selector de Elementos */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px; 
+    margin: auto;
+    line-height: 1.6;
+    padding: 20px;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* 3. Selector de Clase */
+.tarjeta-item {
+    background: var(--color-blanco);
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(45, 13, 66, 0.06);
+    border: 1px solid #fbcfe8; 
+}
+
+/* 4. Selector de Clase Específico */
+section.seccion-destacada {
+    background-color: #fdf2f8;
+    border: 1px solid #f472b6;
+}
+
+/* 5. Selector de ID */
+#principal-header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+/* 6. Selector de Agrupamiento */
+h1, h2, h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+/* 7. Selector Combinador de Descendientes */
+main p {
+    margin-bottom: 1rem;
+}
+
+/* 8. Selector Combinador de Hijos Directos */
+nav > a {
+    margin-right: 1rem;
+    color: #fbcfe8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 9. Selector Combinador de Hermanos Generales */
+h2 ~ p {
+    font-size: 1rem;
+}
+
+/* 10. Selector Combinador de Hermano Adyacente */
+h2 + p {
+    font-weight: normal;
+}
+
+/* 11. Selector de Pseudoclases */
+nav > a:hover {
+    color: var(--color-blanco);
+    text-decoration: underline;
+}
+
+tr:nth-child(even) {
+    background-color: #fdf2f8;
+}
+
+/* 12. Selector de Pseudoelementos */
+p::first-letter {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* 13. Selector de Atributo */
+input[type="text"], input[type="email"], input[type="date"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #f472b6;
+    border-radius: 4px;
+}
+
+/*TÉCNICAS DE MAQUETACIÓN */
+
+/* Técnica 1: Flexbox para el menú de navegación */
+.menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Técnica 2: CSS Grid con 4 columnas para el catálogo de tarjetas */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* <--- 4 tarjetas por fila en escritorio */
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* Armonización de imágenes con diferentes tamaños */
+.tarjeta-item img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Estilos de tablas y botones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #fbcfe8;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+button, .btn {
+    background-color: var(--color-secundario); 
+    color: var(--color-blanco);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: #be185d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #64748b;
+}
+
+/* DISEÑO RESPONSIVO (Media Queries) */
+@media (max-width: 900px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr; /* 1 columna en celulares */
+    }
+    body {
+        padding: 10px;
+    }
+}
